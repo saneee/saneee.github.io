@@ -33,7 +33,7 @@ lua跟php一样，也是解释执行的，与php不同的是，lua对象只需�
     local test=require("Test");
     test.test();
     ngx.exit(200);
-    
+   
 运行以上代码，每次执行都会不同，这说明Test.lua只加载了一次，当然这个是对于一个nginx进程来说的，一般ningx有多个worker，那么重复执行，会发生如下情况
 root@ha23:~/tmp# curl 192.168.2.204:8090/lapp/test3
 
